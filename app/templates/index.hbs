@@ -1,0 +1,10 @@
+<h1>Recently published decrees by the Flemish Government</h1>
+<div class="row">
+  <div class="column results">
+    <div class="list-group">
+      {{#each @model as |decree|}}
+        <Decree @decree={{decree}} />
+      {{/each}}
+    </div>
+  </div>
+</div>
