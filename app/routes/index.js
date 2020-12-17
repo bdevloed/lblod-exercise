@@ -6,7 +6,7 @@ PREFIX eli: <http://data.europa.eu/eli/ontology#>
 PREFIX aw: <https://data.vlaanderen.be/id/concept/AardWetgeving/>
 
 SELECT DISTINCT * WHERE {
-  ?decreet
+  ?decree
     eli:type_document
       aw:Decreet;
     eli:is_realized_by
@@ -36,11 +36,12 @@ export default class IndexRoute extends Route {
     // The title contains decimal encoded characters.
     // Ideally this is fixed at server side
     return bindings.map(model => {
-      let decreet = model.decreet;
+      let decree = model.decree;
       let date = model.date;
-      let title = model.title ;
+      let title = model.title;
+      let verschijningsvorm = model.verschijningsvorm;
       title.value = decode(title.value);
-      return { decreet, date, title };
+      return { decree, date, verschijningsvorm, title };
     });
   }
 }

@@ -1,6 +1,11 @@
-<a href="#" class="list-group-item list-group-item-action decree">
-  <p class="mb-1 publication-date">
-    <time datetime="{{@decree.date.value}}">{{@decree.date.value}}</time>
-  </p>
-  <p class="mb-1 title">{{@decree.title.value}}</p>
+<decree typof="https://data.vlaanderen.be/id/concept/AardWetgeving/Decreet" resource="{{@decree.decree.value}}">
+  <realization property="http://data.europa.eu/eli/ontology#is_realized_by" resource={{@decree.verschijningsvorm.value}} />
+</decree>
+<a href="#" class="list-group-item list-group-item-action decree" resource={{@decree.verschijningsvorm.value}}>
+  <div >
+    <p class="mb-1 publication-date">
+      <time property="http://data.europa.eu/eli/ontology#date_publication">{{@decree.date.value}}</time>
+    </p>
+    <p class="mb-1 title" property="http://data.europa.eu/eli/ontology#title">{{@decree.title.value}}</p>
+  </div>
 </a>
