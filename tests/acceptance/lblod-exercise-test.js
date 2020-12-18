@@ -2,7 +2,7 @@ import { module, test } from 'qunit';
 import { click, find, visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 
-module('Acceptance | super rentals', function(hooks) {
+module('Acceptance | LblodExercise', function(hooks) {
   setupApplicationTest(hooks);
 
   test('visiting /', async function(assert) {
