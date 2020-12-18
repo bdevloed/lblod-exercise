@@ -1,7 +1,8 @@
 # lblod-exercise
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+An exercise to use emberjs + sparql
+
+This web app lists the last 5 published decrees (laws) by the Flemish Government. Both human readable and in rdfa.
 
 ## Prerequisites
 
